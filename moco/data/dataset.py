@@ -10,7 +10,7 @@ class DummyMoCoDataset(Dataset):
         self.config = config
 
     def __len__(self):
-        return 100
+        return 10
 
     def __getitem__(self, item):
         return self.transform(

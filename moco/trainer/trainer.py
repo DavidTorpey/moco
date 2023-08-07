@@ -42,7 +42,7 @@ class Trainer:
 
             self.optimiser.param_groups[0]['lr'] = self.lr_schedule[global_iteration]
 
-            x_query, x_key = batch[0]
+            x_query, x_key = batch
 
             update_momentum(self.model.backbone, self.model.backbone_momentum, m=momentum_val)
             update_momentum(
@@ -79,7 +79,7 @@ class Trainer:
         val_contrastive_accuracy = 0.0
         with torch.no_grad():
             for batch in val_loader:
-                x_query, x_key = batch[0]
+                x_query, x_key = batch
 
                 x_query = x_query.to(self.config.optim.device)
                 x_key = x_key.to(self.config.optim.device)
