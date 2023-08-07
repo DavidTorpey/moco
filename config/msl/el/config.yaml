@@ -1,0 +1,15 @@
+general:
+  output_dir: /home-mscluster/dtorpey/code/moco/results/el
+  log_to_wandb: True
+  checkpoint_freq: 10
+data:
+  dataset: el
+  dataset_root: /home-mscluster/dtorpey/dataset/el/el
+  max_images: 20000
+optim:
+  lr: 0.07
+  weight_decay: 1.0e-10
+  workers: 4
+  batch_size: 16
+  epochs: 500
+  device: cuda

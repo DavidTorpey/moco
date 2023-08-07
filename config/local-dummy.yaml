@@ -1,0 +1,7 @@
+general:
+  output_dir: ./results/moco/dummy
+data:
+  dataset: dummy
+  dataset_root: /does/not/exist
+optim:
+  workers: 0
