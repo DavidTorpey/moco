@@ -1,4 +1,4 @@
-from lightly.transforms import SimCLRTransform, MoCoV2Transform
+from lightly.transforms import MoCoV2Transform
 import torchvision.transforms as T
 
 from moco.cfg import Config

@@ -132,7 +132,7 @@ class Trainer:
             if epoch % self.config.general.checkpoint_freq == 0 or (epoch + 1) == self.config.optim.epochs:
                 torch.save(
                     state_dict,
-                    os.path.join(self.config.general.output_dir, f'simclr-epoch-{epoch}.pth')
+                    os.path.join(self.config.general.output_dir, f'moco-epoch-{epoch}.pth')
                 )
 
             if val_loss < best_val_loss:
